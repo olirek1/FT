@@ -1,12 +1,17 @@
 const express = require('express');
 const route = express.Router();
-const services = require('../services/render');
 
+const services = require('../services/render');
 const controller = require('../controller/controller');
 
 route.get('/',services.homeRoutes)
+
+route.get('/plantatree',services.createTreeRoutes)
+
 route.get('/:id',services.userRoutes)
-route.get('/update-user/:id', services.update_user)
+
+route.get('/updateuser', services.updateUser)
+
 
 //api for crud 
 route.post('/api/users',controller.create);
