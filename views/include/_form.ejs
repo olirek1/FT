@@ -1,47 +1,44 @@
 <!-- form handling -->
-<form action="/api/users" method="POST" id="add_user">
-<div class="new_user">
+<form action="/api/users" method="POST" id="add_user">    
+    <div class="titleText"><span>P</span>lant A Tree</div>
     <div class="form-group">
-        <label for="name" class="text-light">Name</label>
         <input type="hidden" name="id" value="">
-        <input type="text" name="name" value="" placeholder="Mark Stoenis">
+        <input type="text" class="form_input" name="name" value="" placeholder="" >
+        <label for="name" class="form_label">Name</label>
     </div>
     <div class="form-group">
-        <label for="Email" class="text-light">Email</label>
-        <input type="text" name="email" value="" placeholder="example@gmail.com">
+        <input type="text" class="form_input" name="email" value="" placeholder="">
+        <label for="Email" class="form_label">Email</label>
     </div>
     <div class="form-group">
-        <label for="contact" class="text-light">Contact Number</label>
-        <input type="text" name="contact" value="" placeholder="8888888888">
+        <input type="text" name="contact" class="form_input" value="" placeholder="">
+        <label for="contact" class="form_label">Contact Number</label>
     </div>
     <div class="form-group">
-        <label for="DOB" class="text-light">Date of Birth</label>
-        <input type="date" name="dob" value="" placeholder="dd/mm/yyyy">
+        <input type="textarea" name="address" class="form_input" value="" placeholder="">
+        <label for="Address" class="form_label">Address</label>
+    </div>
+    <div class="radio-buttons">
+        <label class="custom-radio">
+            <input type="radio" id="radio-2" name="gender" value="Male" checked />
+            <span class="radio-btn"><i class="las la-check"></i>
+            <div class="hobbies-icon">
+                <i class="las la-mars"></i>
+                <h3>Male</h3>
+            </div>
+            </span>
+        </label>
+        <label class="custom-radio">
+            <input type="radio" id="radio-3" name="gender" value="Female" />
+            <span class="radio-btn"><i class="las la-check"></i>
+            <div class="hobbies-icon">
+                <i class="las la-venus"></i>
+                <h3>Female</h3>
+            </div>
+            </span>
+        </label>
     </div>
     <div class="form-group">
-        <label for="DOD" class="text-light">Date of Death</label>
-        <input type="date" name="dod" value="" placeholder="dd/mm/yyyy">
-    </div>
-    <div class="form-group">
-        <label for="Address" class="text-light">Address</label>
-        <input type="textarea" name="address" value="" placeholder="example@gmail.com">
-    </div>
-    <div class="form-group">
-        <label for="gender" class="text-light">Gender</label>
-        <div class="radio inline">
-            <input type="radio" id="radio-2" name="gender" value="Male" >
-            <label for="radio-2" class="radio-label">Male</label>
-        </div>
-        <div class="radio inline">
-            <input type="radio" id="radio-3" name="gender" value="Female" >
-            <label for="radio-3" class="radio-label">Female</label>
-        </div>
-    </div>
-
-
-    <div class="form-group">
-        <button type="submit" class="btn text-dark update">Save</button>
-    </div>
-
-    </div>
+        <button type="submit" class="form__button">Save</button>
+    </div>    
 </form>

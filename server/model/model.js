@@ -7,26 +7,27 @@ var schema = new mongoose.Schema({
     },
     email:{
         type: String,
-        required:true,
+        required:false,
         unique: true
     },
     contact:{
         type:String,
-        require:true,
+        require:false,
         unique:true
     },
     dob:{
         type:Date,
-        required:true
+        required:false
     },
     dod:{
         type:Date,
-        required:true
+        required:false
     },
     address:{
         type:String,
-        required: true,
+        required: false,
     },
+    
     gender:String,
 });
 

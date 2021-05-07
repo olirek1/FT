@@ -3,7 +3,7 @@ var Userdb = require('../model/model');
 // create and save new user
 
 exports.create = (req,res)=>{
-    console.log("im in controller");
+    // console.log("im in controller");
     //validate request
     if(!req.body){
         res.status(400).send({ message : "content can not be empty"});
@@ -25,7 +25,7 @@ exports.create = (req,res)=>{
         .save(user)
         .then(data=>{
             // res.send(data);
-            // console.log(data._id);
+            console.log(data._id);
             res.redirect('/'+data._id);
         })
         .catch(err=>{
